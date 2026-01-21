@@ -4,6 +4,7 @@ export default function Home() {
       <div className="hero-content text-center">
         <div className="max-w-md">
           <h1 className="text-5xl font-bold text-primary">Rick & Morty DB</h1>
+          
           <p className="py-6">
             Bienvenido a la aplicación de consulta de la API de Rick y Morty. 
             Desarrollado para el módulo de Desarrollo Web en Entorno Cliente.
