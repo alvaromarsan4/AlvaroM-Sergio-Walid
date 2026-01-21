@@ -1,3 +1,5 @@
+'use client';
+
 export default function Home() {
   return (
     <div className="hero min-h-[70vh] bg-base-200 rounded-box">

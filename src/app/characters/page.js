@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useCharacters } from '@/hooks/useCharacters';
 import StatsChart from '@/components/StatsChart';
+import { motion } from "framer-motion"
 
 export default function CharacterPage() {
   const [filter, setFilter] = useState('');
@@ -37,11 +38,20 @@ export default function CharacterPage() {
             characters.map(char => (
               <div key={char.id} className="card card-side bg-neutral/50 backdrop-blur-md border border-white/10 hover:border-primary/50 transition-all group shadow-xl">
                 <figure className="w-1/3 overflow-hidden">
-                  <img 
-                    src={char.image} 
-                    alt={char.name} 
-                    className="h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  />
+                  <motion.img
+  src={char.image}
+  alt={char.name}
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1, y: [0, -6, 0] }}
+  transition={{
+    opacity: { duration: 0.4 },
+    scale: { duration: 0.4 },
+    y: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+  }}
+  whileHover={{ scale: 1.12 }}
+  className="cursor-pointer"
+/>
+
                 </figure>
                 <div className="card-body p-4 justify-center">
                   <h3 className="card-title text-white text-base leading-tight">{char.name}</h3>
