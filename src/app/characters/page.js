@@ -83,15 +83,29 @@ export default function CharacterPage() {
 
               {/* TEXTO BIEN ALINEADO */}
               <div className="card-body text-center space-y-3">
-                <h3 className="text-xl font-bold text-white">
+                <h3 className="text-xl font-bold text-white">Nombre:
                   {char.name}
                 </h3>
 
                 <div className="flex justify-center gap-2">
-                  <span className="badge badge-primary badge-outline">
+                  <span className="badge badge-primary badge-outline">Especie:
                     {char.species}
                   </span>
-                  <span className={`badge ${char.status === 'Alive' ? 'badge-success' : 'badge-error'}`}>
+                </div>
+                  <div className="flex justify-center gap-2">
+                  <span className="badge badge-primary badge-outline">Género:
+                    {char.gender}
+                  </span>
+                </div>
+                  <div className="flex justify-center gap-2">
+
+                  <span className="badge badge-primary badge-outline">Origen:
+                    {char.origin.name}
+                  </span>
+                </div>
+
+                <div className="flex justify-center gap-2">
+                  <span className={`badge ${char.status === ' Alive ' ? 'badge-success' : 'badge-error'}`}>Estado:
                     {char.status}
                   </span>
                 </div>
