@@ -21,7 +21,7 @@ export default function StatsChart({ characters }) {
 
   const options = {
     responsive: true,
-    maintainAspectRatio: false, // Importante para contenedores pequeños
+    maintainAspectRatio: false,
     plugins: {
       legend: { display: false },
       tooltip: { enabled: true }
@@ -30,7 +30,6 @@ export default function StatsChart({ characters }) {
   };
 
   return (
-    /* Forzamos dimensiones mínimas para que Chart.js detecte espacio para dibujar */
     <div style={{ position: 'relative', height: '150px', width: '150px' }}>
       <Doughnut data={data} options={options} />
     </div>

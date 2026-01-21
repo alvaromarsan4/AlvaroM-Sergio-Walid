@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 * {
-  /* Fondo muy claro pero con un toque de color para dar profundidad */
   background-color: #000000; 
   color: #ffffff;
 }

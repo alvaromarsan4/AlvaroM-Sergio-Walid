@@ -25,10 +25,10 @@ export default function CharacterPage() {
         </div>
       </div>
 
-      {/* Layout de dos columnas: Izquierda (Cartas) - Derecha (Gráfico) */}
+      {/* Layout: Abajo(Cartas) - Arriba (Gráfico) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 w-full items-start">
         
-        {/* COLUMNA IZQUIERDA: Listado de Personajes */}
+        {/* ABAJO: Listado de Personajes */}
         <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6 order-2 lg:order-1">
           {loading ? (
             <div className="col-span-full flex justify-center py-20">
@@ -69,7 +69,7 @@ export default function CharacterPage() {
           )}
         </div>
 
-        {/* COLUMNA DERECHA: Gráfico Circular */}
+        {/* ARRIBA: Gráfico Circular */}
         <aside className="lg:col-span-4 flex flex-col items-center space-y-4 order-1 lg:order-2 lg:sticky lg:top-24">
           <div className="badge badge-secondary badge-outline font-bold tracking-widest p-3">ANÁLISIS DE DATOS</div>
           {characters.length > 0 ? (
